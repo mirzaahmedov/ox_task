@@ -28,7 +28,7 @@ const LoginForm = () => {
 
       setTimeout(() => {
         navigate('/');
-      }, 500);
+      }, 200);
     }
   });
 
