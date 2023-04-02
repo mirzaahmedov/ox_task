@@ -1,4 +1,4 @@
-import { Alert, Button, Checkbox, Form, Input } from "antd"
+import { Alert, Button, Checkbox, Form, Input, Typography } from "antd"
 import { UserOutlined, LockOutlined } from "@ant-design/icons"
 import { useNavigate } from "react-router-dom";
 import { useMutation } from '@tanstack/react-query';
@@ -41,6 +41,9 @@ const LoginForm = () => {
     <Form
       onFinish={handleSubmit}
     >
+      <Form.Item>
+        <Typography.Title>Login</Typography.Title>
+      </Form.Item>
       {
         mutation.isError && (
           <Form.Item>

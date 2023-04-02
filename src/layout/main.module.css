@@ -1,0 +1,26 @@
+.Logo {
+  padding: 20px;
+  color: #1677ff !important;
+}
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Logout {
+  margin-left: auto;
+}
+.MenuBtn {
+  display: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .Sidebar {
+    display: none;
+  }
+  .MenuBtn {
+    display: block;
+  }
+}
+

@@ -65,8 +65,9 @@ const Products = () => {
         <div className={styles.Container}>
           <Typography.Title>Products</Typography.Title>
           <Input.Search value={term} onChange={e => setTerm(e.target.value)} />
-          <Table pagination={false} dataSource={filtered} columns={cols} rowKey="id" />
+          <Table scroll={{ x: true }} pagination={false} dataSource={filtered} columns={cols} rowKey="id" />
           <Pagination
+            className={styles.Pagination}
             current={page}
             total={data?.total_count}
             onChange={setPage}
