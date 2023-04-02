@@ -1,12 +1,23 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export const useDeferedValue = <T>(value: T, delay: number) => {
+  const timeout = useRef<number | null>()
+
   const [deferredValue, setDeferredValue] = useState<T>(value)
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    if (timeout.current) {
+      clearTimeout(timeout.current)
+    }
+
+    timeout.current = setTimeout(() => {
       setDeferredValue(value)
     }, delay)
-    return () => clearTimeout(timeout)
+
+    return () => { 
+      if (timeout.current) {
+        clearTimeout(timeout.current)
+      }
+    }
   }, [value, delay])
   return deferredValue
 }
