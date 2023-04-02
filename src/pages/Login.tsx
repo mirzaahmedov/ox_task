@@ -1,11 +1,8 @@
-import styles from './login.module.css';
-import LoginForm from "../features/LoginForm"
+import LoginForm from "@/features/auth/LoginForm"
 
 const Login = () => {
   return (
-    <div className={styles.Container}>
-      <LoginForm />
-    </div>
+    <LoginForm />
   )
 }
 

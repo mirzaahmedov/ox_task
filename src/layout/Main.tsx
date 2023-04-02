@@ -4,7 +4,7 @@ import { Button, Drawer, Layout, Menu, Typography } from "antd"
 import { HomeOutlined, LogoutOutlined, MenuOutlined, TableOutlined,  } from "@ant-design/icons"
 
 import styles from './main.module.css';
-import { useAuth } from "../context/auth";
+import { useAuth } from "@/context/auth";
 
 const menuItems = [
   {

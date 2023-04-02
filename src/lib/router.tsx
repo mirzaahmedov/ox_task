@@ -1,10 +1,11 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import Protected from "../layout/Protected";
-import Main from "../layout/Main";
+const Protected = lazy(() => import("@/layout/Protected"));
+const Main = lazy(() => import("@/layout/Main"));
 
-import Login from "../pages/Login";
-import Products from "../pages/Products";
+const Login = lazy(() => import("@/pages/Login"));
+const Products = lazy(() => import("@/pages/Products"));
 
 const router = createBrowserRouter(
   [
